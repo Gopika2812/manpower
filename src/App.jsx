@@ -824,6 +824,18 @@ margin-top: 200px;
             transition: transform 0.3s ease;
             text-align: center;
           }
+
+          @media (max-width: 768px) {
+          .stat-card {
+            background-color: #2A5D7F;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            text-align: center;
+            font-size: 10px;
+        }
+        }
           
           .stat-card:hover {
             transform: translateY(-8px);
