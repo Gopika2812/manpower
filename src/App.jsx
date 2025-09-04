@@ -251,10 +251,19 @@ const JobSeekingForm = ({ onClose }) => {
 
           <div className="form-field">
             <label htmlFor="position">Position*</label>
-            <select id="position" name="position" value={formData.position} onChange={handleChange} required>
+            <select id="position" name="position" value={formData.position} onChange={handleChange}>
               <option value="UI/UX Designer">UI/UX Designer</option>
+              <option value="UI/UX Designer">SALES & MARKETING</option>
+              <option value="Web Developer">ACCOUNTANT</option>
+              <option value="Data Analyst">RECEPTIONIST</option>
+              <option value="UI/UX Designer">HOUSE KEEPING</option>
+              <option value="Web Developer">COOK</option>
+              <option value="Data Analyst">NURSE</option>
               <option value="Web Developer">Web Developer</option>
               <option value="Data Analyst">Data Analyst</option>
+              <option value="Data Analyst">DRIVER</option>
+              <option value="Web Developer">DEGREE HOLDER</option>
+              <option value="Data Analyst">HOTEL MANPOWER</option>
             </select>
           </div>
 
