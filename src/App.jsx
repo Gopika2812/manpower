@@ -1,5 +1,6 @@
 import emailjs from "emailjs-com";
 import { useEffect, useState } from 'react';
+import { Link } from "react-router-dom";
 
 // Hero Section Component
 const HeroSection = () => {
@@ -10,16 +11,17 @@ const HeroSection = () => {
         <h1 className="hero-title">WELCOME TO SUCCESS GROUP SOLUTIONS</h1>
         <p className="hero-tagline">Your Trusted Partner in Homecare Manpower Services</p>
         <div className="hero-cards">
-          <div className="card">
-            <img src="/images/manpower.png" alt="Workforce" className="card-image" />
-            <h3 className="card-title">SUCCESS MANPOWER SOLUTIONS</h3>
-            <p className="card-text">Reliable Workforce, Reliable Future</p>
-          </div>
-          <div className="card">
-            <img src="/images/homecare.png" alt="Homecare" className="card-image" />
-            <h3 className="card-title">SUCCESS HOMECARE SOLUTIONS</h3>
-            <p className="card-text">Caring Homes, Caring Families</p>
-          </div>
+          <Link to="/manpower" className="card">
+            <img src="/images/manpower.png" alt="Workforce" />
+            <h3>SUCCESS MANPOWER SOLUTIONS</h3>
+            <p>Reliable Workforce, Reliable Future</p>
+          </Link>
+
+          <Link to="/homecare" className="card">
+            <img src="/images/homecare.png" alt="Homecare" />
+            <h3>SUCCESS HOMECARE SOLUTIONS</h3>
+            <p>Caring Homes, Caring Families</p>
+          </Link>
         </div>
       </div>
     </section>
@@ -328,7 +330,7 @@ const ServicesSection = () => {
       <div className="container">
         <h2 className="section-title">Our Services</h2>
         <div className="services-grid">
-          
+
           {/* Manpower Solutions Card */}
           <div className="service-card">
             <img
@@ -598,71 +600,126 @@ const App = () => {
             }
           }
 
-          /* Hero Section */
-          .hero-section {
-            position: relative;
-            height: 100vh;
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            overflow: hidden;
-            background-image: url('/images/hero-bg.png');
-          }
-          
-          .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-          }
-          
-          .hero-content {
-            position: relative;
-            z-index: 2;
-            padding: 0 24px;
-            color: white;
-          }
-          
-          .hero-title {
-            margin-top: 120px;
-            font-size: 45px;
-            font-weight: 800;
-            margin-bottom: 16px;
-          }
-          
-          .hero-tagline {
-            font-size: 24px;
-            font-weight: 300;
-            margin-bottom: 48px;
-          }
-          
-          .hero-cards {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            gap: 24px;
-            margin-bottom: 52px;
-          }
-          
-          @media (max-width: 768px) {
+/* Hero Section */
+.hero-section {
+  position: relative;
+  padding: 4rem 1rem;
+  background: url('/images/hero-bg.png') no-repeat center center/cover;
+  text-align: center;
+  
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-title {
+color: #ffffff;
+margin-top: 200px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-tagline {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 3rem;
+}
+
+/* Container for hero cards */
+.hero-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem; /* Space between cards */
+  padding: 2rem 1rem;
+}
+
+/* Individual card */
+.hero-cards .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 250px;
+  padding: 1.5rem 1rem;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-decoration: none; /* Remove underline from links */
+  color: #3b0a0a; /* Heading and text color */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Card hover effect */
+.hero-cards .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Card image */
+.hero-cards .card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+/* Card heading */
+.hero-cards .card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+/* Card paragraph */
+.hero-cards .card p {
+  font-size: 0.95rem;
+  color: #555555;
+}
+@media (max-width: 768px) {
   .hero-title {
-  margin-top: 80px;
-    font-size: 28px;
+    font-size: 1.8rem;
   }
   .hero-tagline {
-    font-size: 18px;
+    font-size: 1rem;
   }
   .hero-cards {
     flex-direction: column;
-    gap: 16px;
+    gap: 1.5rem;
   }
-
+  .card {
+    margin: 0 auto;
+    width: 70%;
+    padding: 1rem;
+  }
+  .card-image {
+    width: 70px;
+    height: 70px;
+  }
+  .card-title {
+    font-size: 1rem;
+  }
+  .card-text {
+    font-size: 0.85rem;
+  }
+}
+          
+@media (max-width: 768px) {
   .about-subheading {
     font-size: 20px;
   }
@@ -670,7 +727,7 @@ const App = () => {
     font-size: 28px;
   }
   .join-hands-heading {
-    font-size: 28px;
+    font-size: 20px;
   }
 
   .stats-container {
@@ -683,40 +740,6 @@ const App = () => {
     gap: 24px;
   }
 }
-
-          
-          .card {
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 12px;
-            padding: 24px;
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            width: 256px;
-            transition: transform 0.3s ease;
-          }
-          
-          .card:hover {
-            transform: translateY(-8px);
-          }
-          
-          .card-image {
-            width: 100px;
-            height: 100px;
-            margin-bottom: 16px;
-            border-radius: 9999px;
-          }
-          
-          .card-title {
-            font-size: 18px;
-            font-weight: bold;
-            color: #1a202c;
-            margin-bottom: 8px;
-          }
-          
-          .card-text {
-            font-size: 14px;
-            color: #4a5568;
-          }
           
           /* About Section */
           .about-section {
@@ -821,7 +844,7 @@ const App = () => {
           }
           
           .join-hands-heading {
-            font-size: 40px;
+            font-size: 28px;
             font-weight: bold;
             margin-bottom: 48px;
           }
@@ -1000,7 +1023,7 @@ color: #2A5D7F;
           
           /* Footer */
           .footer {
-            background-color: #1a202c;
+            background-color: #2A5D7F;
             color: white;
             padding: 32px 0;
             text-align: center;
@@ -1055,132 +1078,186 @@ color: #2A5D7F;
             border-top: 1px solid #4a5568;
             padding-top: 16px;
           }
-          
           /* Forms and Overlay */
-          .form-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 100;
-          }
-          
-          .form-container {
-            background-color: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            max-width: 600px;
-            width: 90%;
-            position: relative;
-          }
+.form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  padding: 1rem; /* Prevent content touching screen edges on mobile */
+  overflow-y: auto;
+}
 
-          .form-close-button {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: none;
-            border: none;
-            font-size: 24px;
-            color: #718096;
-            cursor: pointer;
-          }
-          
-          .form-heading {
-            font-size: 32px;
-            font-weight: bold;
-            color: #2A5D7F;
-            margin-bottom: 24px;
-            text-align: left;
-          }
-          
-          .form-grid {
-            display: grid;
-            gap: 20px;
-            grid-template-columns: 1fr;
-          }
-          
-          @media (min-width: 600px) {
-            .form-grid {
-              grid-template-columns: 1fr 1fr;
-            }
-          }
-          
-          .form-field {
-            display: flex;
-            flex-direction: column;
-          }
-          
-          .form-field.full-width {
-            grid-column: 1 / -1;
-          }
-          
-          .form-field label {
-            font-weight: bold;
-            margin-bottom: 8px;
-            color: #4a5568;
-          }
-          
-          .form-field input,
-          .form-field select,
-          .form-field textarea {
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 12px;
-            font-size: 16px;
-            width: 100%;
-            box-sizing: border-box;
-          }
+.form-container {
+  background-color: white;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
 
-          .input-group {
-            display: flex;
-            align-items: center;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 0 12px;
-          }
-          
-          .input-group span {
-            color: #718096;
-            margin-right: 8px;
-          }
-          
-          .input-group input {
-            border: none;
-            padding: 12px 0;
-          }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-          .form-field input:focus,
-          .form-field select:focus,
-          .form-field textarea:focus,
-          .input-group:focus-within {
-            outline: none;
-            border-color: #2A5D7F;
-            box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
-          }
-          
-          .submit-button {
-            
-            background-color: #2A5D7F;
-            color: white;
-            font-size: 18px;
-            font-weight: bold;
-            padding: 16px 32px;
-            border-radius: 9999px;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-          }
-          
-          .submit-button:hover {
-            background-color: #dbe3e9ff;
-            color: #2A5D7F;
-          }
+.form-close-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: #718096;
+  cursor: pointer;
+}
+
+.form-heading {
+  font-size: 28px;
+  font-weight: bold;
+  color: #2A5D7F;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr; /* Single column by default */
+}
+
+@media (min-width: 480px) {
+  .form-grid {
+    gap: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr 1fr; /* Two columns on tablets */
+  }
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-field label {
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #4a5568;
+  font-size: 14px;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0 10px;
+}
+
+.input-group span {
+  color: #718096;
+  margin-right: 6px;
+  font-size: 14px;
+}
+
+.input-group input {
+  border: none;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus,
+.input-group:focus-within {
+  outline: none;
+  border-color: #2A5D7F;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.submit-button {
+  background-color: #2A5D7F;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 14px 28px;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  grid-column: 1 / -1;
+}
+
+.submit-button:hover {
+  background-color: #dbe3e9ff;
+  color: #2A5D7F;
+}
+
+/* Small screens adjustments */
+@media (max-width: 480px) {
+  .form-heading {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .form-container {
+    padding: 20px 15px;
+  }
+
+  .submit-button {
+    width: 30%;
+    padding: 12px 0;
+  }
+
+  .form-field label {
+    font-size: 13px;
+  }
+
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .input-group span {
+    font-size: 12px;
+  }
+
+  .input-group input {
+    font-size: 13px;
+  }
+}
+
+
         `}
       </style>
 
@@ -1197,12 +1274,12 @@ color: #2A5D7F;
           <div className="nav-menu">
             <a href="#about" className="nav-link" onClick={() => setIsMenuOpen(false)}>ABOUT</a>
             <a href="#service" className="nav-link" onClick={() => setIsMenuOpen(false)}>SERVICE</a>
-            <a href="#contact" className="nav-link" onClick={() => setIsMenuOpen(false)}>CONTACT</a>
+            <a href="#footer" className="nav-link" onClick={() => setIsMenuOpen(false)}>CONTACT</a>
           </div>
           <div className={`nav-menu-mobile ${isMenuOpen ? 'open' : ''}`}>
             <a href="#about" className="nav-link" onClick={() => setIsMenuOpen(false)}>ABOUT</a>
             <a href="#service" className="nav-link" onClick={() => setIsMenuOpen(false)}>SERVICE</a>
-            <a href="#contact" className="nav-link" onClick={() => setIsMenuOpen(false)}>CONTACT</a>
+            <a href="#footer" className="nav-link" onClick={() => setIsMenuOpen(false)}>CONTACT</a>
           </div>
         </div>
       </nav>
@@ -1216,7 +1293,7 @@ color: #2A5D7F;
       <ServicesSection />
       <ClientsSection />
 
-      <footer className="footer">
+      <footer className="footer" id="footer">
         <div className="container">
           <div className="footer-grid">
             <div className="footer-column">
