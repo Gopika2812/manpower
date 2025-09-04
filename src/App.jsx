@@ -426,7 +426,7 @@ const App = () => {
         {`
           /* General Body & Typography */
           body {
-            font-family: Arial, sans-serif;
+            font-family: 'JetBrains Mono', monospace;
             color: #333;
             margin: 0;
             padding: 0;
@@ -512,7 +512,7 @@ const App = () => {
           }
           
           .nav-link:hover {
-            color: #2563eb;
+            color: #2A5D7F;
           }
           
           .navbar.scrolled .nav-link {
@@ -520,7 +520,7 @@ const App = () => {
           }
           
           .navbar.scrolled .nav-link:hover {
-            color: #2563eb;
+            color: #2A5D7F;
           }
 
           /* Mobile Nav */
@@ -629,6 +629,7 @@ const App = () => {
           }
           
           .hero-title {
+            margin-top: 120px;
             font-size: 45px;
             font-weight: 800;
             margin-bottom: 16px;
@@ -646,6 +647,7 @@ const App = () => {
             justify-content: center;
             align-items: center;
             gap: 24px;
+            margin-bottom: 52px;
           }
           
           @media (max-width: 768px) {
