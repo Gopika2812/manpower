@@ -284,7 +284,7 @@ const JobSeekingForm = ({ onClose }) => {
             <textarea id="skills" name="skills" rows="3" value={formData.skills} onChange={handleChange}></textarea>
           </div>
 
-          <div className="full-width text-center">
+          <div className="b">
             <button type="submit" className="submit-button">Submit</button>
           </div>
         </form>
@@ -326,43 +326,55 @@ const ServicesSection = () => {
   return (
     <section id="service" className="services-section">
       <div className="container">
-        <h2 className="section-heading">Our Services</h2>
+        <h2 className="section-title">Our Services</h2>
         <div className="services-grid">
+          
+          {/* Manpower Solutions Card */}
           <div className="service-card">
-            <div className="service-icon">
-              <img src="/images/manpower.png" alt="Manpower" className="service-icon-img" />
-            </div>
-            <h3 className="service-card-title">Manpower Solutions</h3>
-            <ul className="service-list">
-              <li>- SALES & MARKETING</li>
-              <li>- ACCOUNTANT</li>
-              <li>- RECRUITMENT</li>
-              <li>- HOME MANAGER & COOKS</li>
-              <li>- DRIVERS</li>
-              <li>- NURSES & AIDES</li>
-              <li>- HEALTH PROFESSIONALS</li>
-            </ul>
+            <img
+              src="/images/manpower.png"
+              alt="Manpower"
+              className="service-img"
+            />
+            <h3 className="service-title">SUCCESS MANPOWER SOLUTIONS</h3>
+            <p className="service-list">
+              <span>• SALES & MARKETING</span>
+              <span>• ACCOUNTANT</span>
+              <span>• RECEPTIONIST</span>
+              <span>• HOUSE KEEPING</span>
+              <span>• COOK</span>
+              <span>• NURSE</span>
+              <span>• DRIVER</span>
+              <span>• DEGREE HOLDER</span>
+              <span>• HOTEL MANPOWER</span>
+            </p>
           </div>
+
+          {/* Homecare Services Card */}
           <div className="service-card">
-            <div className="service-icon">
-              <img src="/images/homecare.png" alt="Homecare" className="service-icon-img" />
-            </div>
-            <h3 className="service-card-title">Homecare Services</h3>
-            <ul className="service-list">
-              <li>- TOILET</li>
-              <li>- TILES</li>
-              <li>- SOFA</li>
-              <li>- HOUSES</li>
-              <li>- VILLA</li>
-              <li>- CARS</li>
-              <li>- ELECTRICAL APPLIANCES</li>
-            </ul>
+            <img
+              src="/images/homecare.png"
+              alt="Homecare"
+              className="service-img"
+            />
+            <h3 className="service-title">SUCCESS HOMECARE SOLUTION</h3>
+            <p className="service-list">
+              <span>• TOILET</span>
+              <span>• TILES</span>
+              <span>• SOFA</span>
+              <span>• HOUSES</span>
+              <span>• GLASSES</span>
+              <span>• HOTELS</span>
+              <span>• COMMERCIAL BUILDINGS</span>
+            </p>
           </div>
+
         </div>
       </div>
     </section>
   );
 };
+
 
 // Clients Section Component
 const ClientsSection = () => {
@@ -617,7 +629,7 @@ const App = () => {
           }
           
           .hero-title {
-            font-size: 48px;
+            font-size: 45px;
             font-weight: 800;
             margin-bottom: 16px;
           }
@@ -630,18 +642,46 @@ const App = () => {
           
           .hero-cards {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            justify-content: center;
             align-items: center;
             gap: 24px;
           }
           
-          @media (min-width: 768px) {
-            .hero-cards {
-              flex-direction: row;
-              justify-content: center;
-              gap: 32px;
-            }
-          }
+          @media (max-width: 768px) {
+  .hero-title {
+  margin-top: 80px;
+    font-size: 28px;
+  }
+  .hero-tagline {
+    font-size: 18px;
+  }
+  .hero-cards {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .about-subheading {
+    font-size: 20px;
+  }
+  .section-heading {
+    font-size: 28px;
+  }
+  .join-hands-heading {
+    font-size: 28px;
+  }
+
+  .stats-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
           
           .card {
             background-color: rgba(255, 255, 255, 0.9);
@@ -680,6 +720,7 @@ const App = () => {
           .about-section {
             padding: 80px 0;
             background-color: #f7fafc;
+            color: #2A5D7F;
           }
           
           .about-container {
@@ -708,7 +749,7 @@ const App = () => {
           .about-subheading {
             font-size: 24px;
             font-weight: bold;
-            color: #2563eb;
+            color: #2A5D7F;
             margin-bottom: 16px;
           }
 
@@ -751,7 +792,7 @@ const App = () => {
           }
           
           .stat-card {
-            background-color: white;
+            background-color: #2A5D7F;
             padding: 32px;
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -766,14 +807,14 @@ const App = () => {
           .stat-number {
             font-size: 18px;
             font-weight: bold;
-            color: #2563eb;
+            color: #ffffff;
           }
           
           /* Join Hands Section */
           .join-hands-section {
             padding: 80px 0;
             background-color: #ffffff;
-            color: #333;
+            color: #2A5D7F;
             text-align: center;
           }
           
@@ -787,7 +828,9 @@ const App = () => {
             display: grid;
             gap: 32px;
           }
-          
+          .card-title {
+            color: #2A5D7F;
+        }
           @media (min-width: 768px) {
             .join-hands-grid {
               grid-template-columns: repeat(2, 1fr);
@@ -817,7 +860,7 @@ const App = () => {
           
           .join-hands-button {
             display: inline-block;
-            background-color: #2563eb;
+            background-color: #2A5D7F;
             color: white;
             font-weight: bold;
             padding: 12px 32px;
@@ -833,71 +876,98 @@ const App = () => {
             background-color: #1d4ed8;
           }
           
-          /* Services Section */
-          .services-section {
-            padding: 80px 0;
-            background-color: #f7fafc;
-          }
-          
-          .services-grid {
-            display: grid;
-            gap: 40px;
-          }
-          
-          @media (min-width: 768px) {
-            .services-grid {
-              grid-template-columns: repeat(2, 1fr);
-            }
-          }
-          
-          .service-card {
-            background-color: white;
-            padding: 32px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: center;
-          }
-          
-          .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-          }
-          
-          .service-icon {
-            margin-bottom: 16px;
-          }
-          
-          .service-icon-img {
-            width: 100px;
-            height: 100px;
-            display: block;
-            margin: 0 auto;
-          }
+          /* Container & Section */
+.services-section {
+  padding: 3rem 0;
+  background-color: #fff;
+  text-align: center;
+}
 
-          .service-card-title {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 8px;
-          }
-          
-          .service-list {
-            list-style: none;
-            padding: 0;
-            text-align: left;
-            margin-top: 16px;
-            color: #4a5568;
-          }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
 
-          .service-list li {
-            margin-bottom: 8px;
-          }
+/* Section Title */
+.section-title {
+color: #2A5D7F;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+}
+
+/* Services Grid */
+.services-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-card {
+  flex: 1;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  background-color: #fff;
+  color: #2A5D7F;
+  font-weight: 600;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 15px rgba(0,0,0,0.15);
+}
+
+
+@media (min-width: 768px) {
+  .services-grid {
+    flex-direction: row;
+  }
+}
+
+/* Service Card */
+.service-card {
+  flex: 1;
+  text-align: center;
+}
+
+/* Service Image */
+.service-img {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+/* Service Title */
+.service-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+/* Service List */
+.service-list {
+  font-size: 0.875rem;
+  color: #2A5D7F;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
           
           /* Clients Section */
           .clients-section {
             padding: 80px 0;
             background-color: #ffffff;
             text-align: center;
+            color: #2A5D7F;
           }
 
           .clients-scroll {
@@ -1022,7 +1092,7 @@ const App = () => {
           .form-heading {
             font-size: 32px;
             font-weight: bold;
-            color: #2563eb;
+            color: #2A5D7F;
             margin-bottom: 24px;
             text-align: left;
           }
@@ -1088,12 +1158,13 @@ const App = () => {
           .form-field textarea:focus,
           .input-group:focus-within {
             outline: none;
-            border-color: #2563eb;
+            border-color: #2A5D7F;
             box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
           }
           
           .submit-button {
-            background-color: #2563eb;
+            
+            background-color: #2A5D7F;
             color: white;
             font-size: 18px;
             font-weight: bold;
@@ -1105,7 +1176,8 @@ const App = () => {
           }
           
           .submit-button:hover {
-            background-color: #1d4ed8;
+            background-color: #dbe3e9ff;
+            color: #2A5D7F;
           }
         `}
       </style>
