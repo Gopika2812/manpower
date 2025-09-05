@@ -579,7 +579,7 @@ const App = () => {
 .hero-section {
   position: relative;
   padding: 4rem 1rem;
-  background: url('/images/homecare-bg.webp') no-repeat center center/cover;
+  background: url('/images/homeservice-bg.jpg') no-repeat center center/cover;
   text-align: center;
   
 }
@@ -602,7 +602,7 @@ const App = () => {
 }
 
 .hero-title {
-color: #ffffff;
+color: #0a0a0aff;
 margin-top: 250px;
   font-size: 2.5rem;
   font-weight: 700;
@@ -611,7 +611,7 @@ margin-top: 250px;
 
 .hero-tagline {
   font-size: 1.2rem;
-  color: #ffffff;
+  color: #0d0d0dff;
   margin-bottom: 3rem;
 }
 .hero-button-homecare {
