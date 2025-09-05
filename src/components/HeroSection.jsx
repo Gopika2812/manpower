@@ -144,6 +144,13 @@ const HiringForm = ({ onClose }) => {
               <option value="Driver">DRIVER</option>
               <option value="Degree Holder">DEGREE HOLDER</option>
               <option value="Hotel Manpower">HOTEL MANPOWER</option>
+              <option value="Home service">Home services</option>
+              <option value="Toilets">Toilets</option>
+              <option value="sofas">Sofas</option>
+              <option value="tiles">Tiles</option>
+              <option value="Glasses">Glasses</option>
+              <option value="Hotels">Hotels</option>
+              <option value="Buildings">Commercial Buildings</option>
             </select>
 
           </div>
@@ -190,7 +197,7 @@ const HiringForm = ({ onClose }) => {
             <textarea id="skills" name="skills" rows="3" value={formData.skills} onChange={handleChange} required></textarea>
           </div>
 
-          <div className="full-width text-center">
+          <div className="submit-row">
             <button type="submit" className="submit-button">Submit</button>
           </div>
         </form>
@@ -265,6 +272,13 @@ const JobSeekingForm = ({ onClose }) => {
               <option value="Driver">DRIVER</option>
               <option value="Degree Holder">DEGREE HOLDER</option>
               <option value="Hotel Manpower">HOTEL MANPOWER</option>
+              <option value="Home service">Home services</option>
+              <option value="Toilets">Toilets</option>
+              <option value="sofas">Sofas</option>
+              <option value="tiles">Tiles</option>
+              <option value="Glasses">Glasses</option>
+              <option value="Hotels">Hotels</option>
+              <option value="Buildings">Commercial Buildings</option>
             </select>
           </div>
 
@@ -305,7 +319,7 @@ const JobSeekingForm = ({ onClose }) => {
             <textarea id="skills" name="skills" rows="3" value={formData.skills} onChange={handleChange}></textarea>
           </div>
 
-          <div className="b">
+          <div className="submit-row">
             <button type="submit" className="submit-button">Submit</button>
           </div>
         </form>
@@ -592,10 +606,16 @@ const App = () => {
   
   .hamburger {
     display: flex;
+    font-size: 14px;
   }
+
+  .navbar-brand {
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
 }
-
-
+}
 /* Hero Section */
 .hero-section {
   position: relative;
@@ -623,16 +643,16 @@ const App = () => {
 }
 
 .hero-title {
-color: #ffffff;
-margin-top: 200px;
+color: #0b0b0bff;
+margin-top: 150px;
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 900;
   margin-bottom: 1rem;
 }
 
 .hero-tagline {
   font-size: 1.2rem;
-  color: #ffffff;
+  color: #161515ff;
   margin-bottom: 3rem;
 }
 
@@ -1221,13 +1241,23 @@ color: #2A5D7F;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  grid-column: 1 / -1;
+  margin-left: auto;
+  margin-right: -50px;
 }
+
 
 .submit-button:hover {
   background-color: #dbe3e9ff;
   color: #2A5D7F;
 }
+
+.submit-row {
+  display: flex;
+  justify-content: center; /* centers the button horizontally */
+  margin-top: 10px;        /* optional spacing above */
+}
+
+
 
 /* Small screens adjustments */
 @media (max-width: 480px) {
@@ -1237,10 +1267,12 @@ color: #2A5D7F;
   }
 
   .form-container {
-    padding: 20px 15px;
+    margin-right: 40px;
+    margin-left: 10px;
   }
 
   .submit-button {
+    margin-right: 120px;
     width: 30%;
     padding: 12px 0;
   }
@@ -1263,6 +1295,18 @@ color: #2A5D7F;
   .input-group input {
     font-size: 13px;
   }
+}
+  .hig.link {
+  display: block;          /* makes it behave like a paragraph */
+  text-align: center;      /* center text */
+  color: #ffffff;          /* custom color */
+  text-decoration: none;   /* remove underline */
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.hig.link:hover {
+  text-decoration: underline;
 }
 
 
@@ -1324,14 +1368,17 @@ color: #2A5D7F;
             </div>
             <div className="footer-column">
               <h3 className="text-white">Contact</h3>
-              <p>Email: contact@successsolutions.com</p>
-              <p>Phone: +1 (123) 456-7890</p>
-              <p>Address: 123 Business Blvd, Suite 100, City, State, 12345</p>
+              <p>Email: admin@successmanpower.com</p>
+              <p>Phone: +91 8438437153</p>
+              <p>Address: 34D Thomas Street, PerumalpuramPost, Tirunelveli- 627007</p>
             </div>
           </div>
           <div className="footer-bottom">
             <p>&copy; 2023 Success Group Solutions. All rights reserved.</p>
           </div>
+          <a href="https://hig-ai-automation.in/" class="hig link">
+            Developed by HIG AI Automation LLP
+          </a>
         </div>
       </footer>
 

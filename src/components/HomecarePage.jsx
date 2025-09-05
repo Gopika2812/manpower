@@ -10,7 +10,7 @@ const HeroSection = () => {
       <div className="hero-content">
         <h1 className="hero-title">WELCOME TO SUCCESS HOMECARE SOLUTIONS</h1>
         <p className="hero-tagline">Your Trusted Partner in homecare Services</p>
-        <a href="#service"><button className="hero-button">Know More</button></a>
+        <a href="#service"><button className="hero-button-homecare">Know More</button></a>
       </div>
     </section>
   );
@@ -22,11 +22,11 @@ const AboutSection = () => {
     <section id="about" className="about-section">
       <div className="about-container">
         <div className="text-center mb-12">
-          <h2 className="section-heading">About Success Group</h2>
+          <h2 className="section-heading">About Success Homecare Solutions</h2>
         </div>
         <div className="about-content">
           <div className="about-text-content">
-            <h3 className="about-subheading">Success Manpower Solutions (SHS)</h3>
+            <h3 className="about-subheading">Success Homecare Solutions (SMS)</h3>
             <div className="service-details">
               <div>
                 <p className="service-paragraph">
@@ -36,7 +36,7 @@ const AboutSection = () => {
             </div>
           </div>
           <div className="about-image-container">
-            <img src="/images/about.png" alt="Our Team" className="about-image" />
+            <img src="/images/our-team.jpg" alt="Our Team" className="about-image-homecare" />
           </div>
         </div>
         <div className="stats-container">
@@ -300,19 +300,19 @@ const JoinHandsSection = ({ onPostVacancy, onApplyNow }) => {
   return (
     <section className="join-hands-section">
       <div className="container">
-        <h2 className="join-hands-heading">Join Hands with Success Group</h2>
+        <h2 className="join-hands-heading">Join Hands with Success Homecare Solutions</h2>
         <div className="join-hands-grid">
           <div className="join-hands-card">
             <h3 className="card-title">I Want to Hire</h3>
             <div className="card-image-container">
-              <img src="/images/hierer.png" alt="Hiring" className="join-hands-image" />
+              <img src="/images/homecare-hier.jpg" alt="Hiring" className="join-hands-image" />
             </div>
             <button onClick={onPostVacancy} className="join-hands-button">POST A VACANCY</button>
           </div>
           <div className="join-hands-card">
             <h3 className="card-title">I Want a Job</h3>
             <div className="card-image-container">
-              <img src="/images/jobseeker.png" alt="Applying" className="join-hands-image" />
+              <img src="/images/homecare-jobseeker1.webp" alt="Applying" className="homecare-jobseeker-image" />
             </div>
             <button onClick={onApplyNow} className="join-hands-button">APPLY NOW</button>
           </div>
@@ -444,148 +444,141 @@ const App = () => {
           }
           
           /* Navbar */
-          .navbar {
-            padding-top: 20px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 50;
-            transition: background-color 0.3s ease, box-shadow 0.3s ease;
-          }
+           .navbar {
+  position: fixed;
+  top: 20px;
+  left: 30px;
+  right: 30px;
+  background-color: #433f3fd9;
+  border-radius: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  z-index: 50;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-          .mandatory-logo img {
-            height: 50px; 
-            }
-          
-          .navbar.scrolled {
-            background-color: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-          }
-          
-          .navbar-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 16px 24px;
-          }
-          
-          .navbar-brand {
-            font-size: 24px;
-            font-weight: bold;
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s ease;
-          }
-          
-          .navbar.scrolled .navbar-brand {
-            color: #1a202c;
-          }
-          
-          .nav-menu {
-            display: flex;
-            gap: 32px;
-          }
-          
-          .nav-link {
-            font-weight: 600;
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s ease;
-          }
-          
-          .nav-link:hover {
-            color: #2A5D7F;
-          }
-          
-          .navbar.scrolled .nav-link {
-            color: #1a202c;
-          }
-          
-          .navbar.scrolled .nav-link:hover {
-            color: #2A5D7F;
-          }
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-          /* Mobile Nav */
-          .hamburger {
-            display: none;
-            cursor: pointer;
-            flex-direction: column;
-            gap: 6px;
-          }
+.mandatory-logo {
+  display: flex;
+  align-items: center; /* vertically center image & text */
+  text-decoration: none;
+}
 
-          .bar {
-            width: 25px;
-            height: 3px;
-            background-color: white;
-            transition: all 0.3s ease;
-          }
+.mandatory-logo img {
+  height: 60px;
+  margin-right: 10px; /* space between logo and text */
+}
 
-          .navbar.scrolled .bar {
-            background-color: #1a202c;
-          }
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
 
-          .hamburger.open .bar:nth-child(1) {
-            transform: rotate(-45deg) translate(-5px, 6px);
-          }
-          
-          .hamburger.open .bar:nth-child(2) {
-            opacity: 0;
-          }
-          
-          .hamburger.open .bar:nth-child(3) {
-            transform: rotate(45deg) translate(-5px, -6px);
-          }
 
-          .nav-menu-mobile {
-            display: none;
-            flex-direction: column;
-            width: 100%;
-            background-color: rgba(255, 255, 255, 0.95);
-            position: absolute;
-            top: 100%;
-            left: 0;
-            padding: 24px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-          }
+.nav-menu {
+  display: flex;
+  gap: 32px;
+}
 
-          .nav-menu-mobile.open {
-            display: flex;
-          }
+.nav-link {
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
 
-          .nav-menu-mobile .nav-link {
-            color: #1a202c;
-            padding: 12px 0;
-            border-bottom: 1px solid #e2e8f0;
-          }
-          
-          .nav-menu-mobile .nav-link:last-child {
-            border-bottom: none;
-          }
+.nav-link:hover {
+  color: #2A5D7F;
+}
 
-          @media (max-width: 768px) {
-            .nav-menu {
-              display: none;
-            }
-            
-            .hamburger {
-              display: flex;
-            }
+/* Mobile Nav */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 6px;
+}
 
-            .navbar-container {
-              padding: 16px;
-            }
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  transition: all 0.3s ease;
+}
 
-            .navbar.scrolled .navbar-brand, .navbar.scrolled .nav-link {
-              color: #1a202c;
-            }
-          }
+.hamburger.open .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.nav-menu-mobile {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 24px;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-menu-mobile.open {
+  display: flex;
+}
+
+.nav-menu-mobile .nav-link {
+  color: #000;
+  padding: 12px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.nav-menu-mobile .nav-link:last-child {
+  border-bottom: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+  
+  .hamburger {
+    display: flex;
+    font-size: 14px;
+  }
+
+  .navbar-brand {
+  margin-top: 0;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+}
 
 /* Hero Section */
 .hero-section {
   position: relative;
   padding: 4rem 1rem;
-  background: url('/images/hero-bg.png') no-repeat center center/cover;
+  background: url('/images/homecare-bg.webp') no-repeat center center/cover;
   text-align: center;
   
 }
@@ -620,9 +613,9 @@ margin-top: 250px;
   color: #ffffff;
   margin-bottom: 3rem;
 }
-.hero-button {
+.hero-button-homecare {
    padding: 12px 32px;
-   background-color: #2A5D7F;
+   background-color: #2b5a2bff;
    color: white;
    font-family: 'JetBrains Mono', monospace;
    border: none;
@@ -631,11 +624,20 @@ margin-top: 250px;
 }
           
 @media (max-width: 768px) {
+
+  .hero-title {
+    font-size: 24px;
+        }
+
+  .hero-tagline {
+    font-size: 16px;
+        }
+
   .about-subheading {
-    font-size: 20px;
+    font-size: 15px;
   }
   .section-heading {
-    font-size: 28px;
+    font-size: 25px;
   }
   .join-hands-heading {
     font-size: 20px;
@@ -718,6 +720,28 @@ margin-top: 250px;
             border-radius: 12px;
             box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
           }
+
+          .about-image-homecare {
+            width: 85%;
+            height: 400px;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+          }
+
+             @media (max-width: 768px) {
+            .about-subheading {
+                 margin-left: -10px;
+            }
+            .service-paragraph {
+                margin-left: -80px;
+            }
+            .about-image-homecare {
+            width: 100%;
+            height: 300px;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+          }
+        }
           
           .stats-container {
             margin-top: 64px;
@@ -809,6 +833,14 @@ margin-top: 250px;
             border-radius: 8px;
             margin-bottom: 24px;
           }
+
+          .homecare-jobseeker-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 24px;
+          }
           
           .join-hands-button {
             display: inline-block;
@@ -826,6 +858,12 @@ margin-top: 250px;
           
           .join-hands-button:hover {
             background-color: #1d4ed8;
+          }
+
+          @media (max-width: 768px) {
+            .join-hands-heading {
+              font-size: 25px;
+            }
           }
           
           /* Container & Section */
@@ -1243,15 +1281,29 @@ color: #2A5D7F;
     font-size: 13px;
   }
 }
+  .hig.link {
+  display: block;          /* makes it behave like a paragraph */
+  text-align: center;      /* center text */
+  color: #ffffff;          /* custom color */
+  text-decoration: none;   /* remove underline */
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.hig.link:hover {
+  text-decoration: underline;
+}
+
         `}
       </style>
 
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="navbar-container">
-
           <a href="#hero" className="mandatory-logo">
-            <img src="/images/manpower.png" alt="Workforce" />
+            <img src="/images/homecare.png" alt="Workforce" />
+            <span class="navbar-brand">HOMECARE SOLUTIONS</span>
           </a>
+
           <div className={`hamburger ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
             <span className="bar"></span>
             <span className="bar"></span>
@@ -1293,7 +1345,7 @@ color: #2A5D7F;
             </div>
             <div className="footer-column">
               <h3 className="text-white">Services</h3>
-               <Link to="/manpower" className="card">
+              <Link to="/manpower" className="card">
                 <p>Manpower Solution</p>
               </Link>
               <Link to="/homecare" className="card">
@@ -1302,14 +1354,17 @@ color: #2A5D7F;
             </div>
             <div className="footer-column">
               <h3 className="text-white">Contact</h3>
-              <p>Email: contact@successsolutions.com</p>
-              <p>Phone: +1 (123) 456-7890</p>
-              <p>Address: 123 Business Blvd, Suite 100, City, State, 12345</p>
+              <p>Email: admin@successmanpower.com</p>
+              <p>Phone: 91 8438437153</p>
+              <p>Address: 34D Thomas Street, PerumalpuramPost, Tirunelveli- 627007</p>
             </div>
           </div>
           <div className="footer-bottom">
             <p>&copy; 2023 Success Group Solutions. All rights reserved.</p>
           </div>
+          <a href="https://hig-ai-automation.in/" class="hig link">
+            Developed by HIG AI Automation LLP
+          </a>
         </div>
       </footer>
 

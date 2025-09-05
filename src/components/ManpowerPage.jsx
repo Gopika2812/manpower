@@ -22,7 +22,7 @@ const AboutSection = () => {
     <section id="about" className="about-section">
       <div className="about-container">
         <div className="text-center mb-12">
-          <h2 className="section-heading">About Success Group</h2>
+          <h2 className="section-heading">About Success Manpower Solutions</h2>
         </div>
         <div className="about-content">
           <div className="about-text-content">
@@ -36,7 +36,7 @@ const AboutSection = () => {
             </div>
           </div>
           <div className="about-image-container">
-            <img src="/images/about.png" alt="Our Team" className="about-image" />
+            <img src="/images/Manpower-ourteam.jpg" alt="Our Team" className="about-image-manpower" />
           </div>
         </div>
         <div className="stats-container">
@@ -300,19 +300,19 @@ const JoinHandsSection = ({ onPostVacancy, onApplyNow }) => {
   return (
     <section className="join-hands-section">
       <div className="container">
-        <h2 className="join-hands-heading">Join Hands with Success Group</h2>
+        <h2 className="join-hands-heading">Join Hands with Success Manpower Solutions</h2>
         <div className="join-hands-grid">
           <div className="join-hands-card">
             <h3 className="card-title">I Want to Hire</h3>
             <div className="card-image-container">
-              <img src="/images/hierer.png" alt="Hiring" className="join-hands-image" />
+              <img src="/images/manpower-hierer.jpg" alt="Hiring" className="join-hands-image" />
             </div>
             <button onClick={onPostVacancy} className="join-hands-button">POST A VACANCY</button>
           </div>
           <div className="join-hands-card">
             <h3 className="card-title">I Want a Job</h3>
             <div className="card-image-container">
-              <img src="/images/jobseeker.png" alt="Applying" className="join-hands-image" />
+              <img src="/images/manpower-jobseeker.jpeg" alt="Applying" className="join-hands-image" />
             </div>
             <button onClick={onApplyNow} className="join-hands-button">APPLY NOW</button>
           </div>
@@ -349,10 +349,13 @@ const ServicesSection = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </div> 
         </section>
+        
       </div>
+      
     </section>
+    
   );
 };
 
@@ -446,148 +449,142 @@ const App = () => {
           }
           
           /* Navbar */
-          .navbar {
-            padding-top: 20px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 50;
-            transition: background-color 0.3s ease, box-shadow 0.3s ease;
-          }
+           .navbar {
+  position: fixed;
+  top: 20px;
+  left: 30px;
+  right: 30px;
+  background-color: #433f3fd9;
+  border-radius: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  z-index: 50;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-          .mandatory-logo img {
-            height: 50px; 
-            }
-          
-          .navbar.scrolled {
-            background-color: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-          }
-          
-          .navbar-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 16px 24px;
-          }
-          
-          .navbar-brand {
-            font-size: 24px;
-            font-weight: bold;
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s ease;
-          }
-          
-          .navbar.scrolled .navbar-brand {
-            color: #1a202c;
-          }
-          
-          .nav-menu {
-            display: flex;
-            gap: 32px;
-          }
-          
-          .nav-link {
-            font-weight: 600;
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s ease;
-          }
-          
-          .nav-link:hover {
-            color: #2A5D7F;
-          }
-          
-          .navbar.scrolled .nav-link {
-            color: #1a202c;
-          }
-          
-          .navbar.scrolled .nav-link:hover {
-            color: #2A5D7F;
-          }
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-          /* Mobile Nav */
-          .hamburger {
-            display: none;
-            cursor: pointer;
-            flex-direction: column;
-            gap: 6px;
-          }
+.mandatory-logo {
+  display: flex;
+  align-items: center; /* vertically center image & text */
+  text-decoration: none;
+}
 
-          .bar {
-            width: 25px;
-            height: 3px;
-            background-color: white;
-            transition: all 0.3s ease;
-          }
+.mandatory-logo img {
+  height: 60px;
+  margin-right: 10px; /* space between logo and text */
+}
 
-          .navbar.scrolled .bar {
-            background-color: #1a202c;
-          }
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
 
-          .hamburger.open .bar:nth-child(1) {
-            transform: rotate(-45deg) translate(-5px, 6px);
-          }
-          
-          .hamburger.open .bar:nth-child(2) {
-            opacity: 0;
-          }
-          
-          .hamburger.open .bar:nth-child(3) {
-            transform: rotate(45deg) translate(-5px, -6px);
-          }
 
-          .nav-menu-mobile {
-            display: none;
-            flex-direction: column;
-            width: 100%;
-            background-color: rgba(255, 255, 255, 0.95);
-            position: absolute;
-            top: 100%;
-            left: 0;
-            padding: 24px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-          }
+.nav-menu {
+  display: flex;
+  gap: 32px;
+}
 
-          .nav-menu-mobile.open {
-            display: flex;
-          }
+.nav-link {
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
 
-          .nav-menu-mobile .nav-link {
-            color: #1a202c;
-            padding: 12px 0;
-            border-bottom: 1px solid #e2e8f0;
-          }
-          
-          .nav-menu-mobile .nav-link:last-child {
-            border-bottom: none;
-          }
+.nav-link:hover {
+  color: #2A5D7F;
+}
 
-          @media (max-width: 768px) {
-            .nav-menu {
-              display: none;
-            }
-            
-            .hamburger {
-              display: flex;
-            }
+/* Mobile Nav */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 6px;
+}
 
-            .navbar-container {
-              padding: 16px;
-            }
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  transition: all 0.3s ease;
+}
 
-            .navbar.scrolled .navbar-brand, .navbar.scrolled .nav-link {
-              color: #1a202c;
-            }
-          }
+.hamburger.open .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.nav-menu-mobile {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 24px;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-menu-mobile.open {
+  display: flex;
+}
+
+.nav-menu-mobile .nav-link {
+  color: #000;
+  padding: 12px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.nav-menu-mobile .nav-link:last-child {
+  border-bottom: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+  
+  .hamburger {
+    display: flex;
+    font-size: 14px;
+  }
+
+  .navbar-brand {
+  margin-top: 0;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+}
 
 /* Hero Section */
 .hero-section {
+
   position: relative;
   padding: 4rem 1rem;
-  background: url('/images/hero-bg.png') no-repeat center center/cover;
+  background: url('/images/manpower-bg2.jpg') no-repeat center center/cover;
   text-align: center;
   
 }
@@ -633,14 +630,16 @@ margin-top: 250px;
 }
           
 @media (max-width: 768px) {
-  .about-subheading {
-    font-size: 20px;
-  }
+  .hero-title {
+    font-size: 24px;
+        }
+
+  .hero-tagline{
+    font-size: 16px;
+    }
+  
   .section-heading {
-    font-size: 28px;
-  }
-  .join-hands-heading {
-    font-size: 20px;
+    font-size: 25px;
   }
 
   .stats-container {
@@ -679,43 +678,46 @@ margin-top: 250px;
               flex-direction: row;
             }
           }
+
+          @media (max-width: 768px) {
+            .about-content {
+              flex-direction: column;
+               }
+        }
           
           .about-text-content {
             flex: 1;
           }
-          
-          .about-subheading {
-            font-size: 24px;
-            font-weight: bold;
-            color: #2A5D7F;
-            margin-bottom: 16px;
-            margin-left: 80px;
-          }
 
           .service-details div {
             text-align: justify;
-            margin-left: 80px;
+            margin-left: 0px;
             margin-bottom: 24px;
-            width: 80%;
+            width: 100%;
           }
 
-          .service-title {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 8px;
-          }
+          .about-subheading {
+            margin-left:80px;
+        }
           
           .service-paragraph {
+           margin-left:80px;
             font-size: 16px;
             color: #666;
           }
-          
           .about-image-container {
             flex: 1;
           }
           
           .about-image {
-            width: 70%;
+            width: 90%;
+            height: 400px;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+          }
+
+          .about-image-manpower {
+            width: 85%;
             height: 400px;
             border-radius: 12px;
             box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
@@ -726,13 +728,28 @@ margin-top: 250px;
             display: grid;
             gap: 32px;
           }
+
+          @media (max-width: 768px) {
+            .about-subheading {
+                 margin-left: 10px;
+            }
+            .service-paragraph {
+                margin-left: 10px;
+            }
+            .about-image-manpower {
+            width: 100%;
+            height: 400px;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+          }
+        }
           
           @media (min-width: 768px) {
             .stats-container {
               grid-template-columns: repeat(4, 1fr);
             }
+
           }
-          
           .stat-card {
             background-color: #2A5D7F;
             padding: 32px;
@@ -773,7 +790,7 @@ margin-top: 250px;
           }
           
           .join-hands-heading {
-            font-size: 28px;
+            font-size: 35px;
             font-weight: bold;
             margin-bottom: 48px;
           }
@@ -785,11 +802,17 @@ margin-top: 250px;
           .card-title {
             color: #2A5D7F;
         }
+            @media (max-width: 768px) {
+            .join-hands-heading {
+              font-size: 20px;
+               }
+            }
           @media (min-width: 768px) {
             .join-hands-grid {
               grid-template-columns: repeat(2, 1fr);
             }
           }
+            
           
           .join-hands-card {
             background-color: #f7fafc;
@@ -877,7 +900,11 @@ color: #2A5D7F;
   box-shadow: 0 10px 15px rgba(0,0,0,0.15);
 }
 
-
+@media(max-width: 768px) {
+  .section-title {
+    font-size: 20px;
+  }
+}
 @media (min-width: 768px) {
   .services-grid {
     flex-direction: row;
@@ -1245,15 +1272,28 @@ color: #2A5D7F;
     font-size: 13px;
   }
 }
+  .hig.link {
+  display: block;          /* makes it behave like a paragraph */
+  text-align: center;      /* center text */
+  color: #ffffff;          /* custom color */
+  text-decoration: none;   /* remove underline */
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.hig.link:hover {
+  text-decoration: underline;
+}
         `}
       </style>
 
-      <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="navbar-container">
-
-          <a href="#hero" className="mandatory-logo">
-            <img src="/images/homecare.png" alt="Workforce" />
+         <a href="#hero" className="mandatory-logo">
+            <img src="/images/manpower.png" alt="Workforce" />
+            <span class="navbar-brand">MANPOWER SOLUTIONS</span>
           </a>
+          
           <div className={`hamburger ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
             <span className="bar"></span>
             <span className="bar"></span>
@@ -1304,14 +1344,17 @@ color: #2A5D7F;
             </div>
             <div className="footer-column">
               <h3 className="text-white">Contact</h3>
-              <p>Email: contact@successsolutions.com</p>
-              <p>Phone: +1 (123) 456-7890</p>
-              <p>Address: 123 Business Blvd, Suite 100, City, State, 12345</p>
+              <p>Email: admin@successmanpower.com</p>
+              <p>Phone: 91 8438437153</p>
+              <p>Address: 34D Thomas Street, PerumalpuramPost, Tirunelveli- 627007</p>
             </div>
           </div>
           <div className="footer-bottom">
             <p>&copy; 2023 Success Group Solutions. All rights reserved.</p>
           </div>
+          <a href="https://hig-ai-automation.in/" class="hig link">
+            Developed by HIG AI Automation LLP
+          </a>
         </div>
       </footer>
 
