@@ -233,18 +233,13 @@ const JobSeekingForm = ({ onClose }) => {
           <div className="form-field">
             <label htmlFor="position">Position*</label>
             <select id="position" name="position" value={formData.position} onChange={handleChange}>
-              <option value="UI/UX Designer">UI/UX Designer</option>
-              <option value="Sales & Marketing">SALES & MARKETING</option>
-              <option value="Accountant">ACCOUNTANT</option>
-              <option value="Receptionist">RECEPTIONIST</option>
-              <option value="House Keeping">HOUSE KEEPING</option>
-              <option value="Cook">COOK</option>
-              <option value="Nurse">NURSE</option>
-              <option value="Web Developer">Web Developer</option>
-              <option value="Data Analyst">Data Analyst</option>
-              <option value="Driver">DRIVER</option>
-              <option value="Degree Holder">DEGREE HOLDER</option>
-              <option value="Hotel Manpower">HOTEL MANPOWER</option>
+              <option value="Home service">Home services</option>
+              <option value="Toilets">Toilets</option>
+              <option value="sofas">Sofas</option>
+              <option value="tiles">Tiles</option>
+              <option value="Glasses">Glasses</option>
+              <option value="Hotels">Hotels</option>
+              <option value="Buildings">Commercial Buildings</option>
             </select>
           </div>
 
@@ -441,6 +436,12 @@ const App = () => {
             font-size: 18px;
             color: #666;
             margin-bottom: 40px;
+          }
+            #about{
+             scroll-margin-top: 100px;
+          }
+          #service{
+             scroll-margin-top: 100px;
           }
           
           /* Navbar */

@@ -498,6 +498,13 @@ const App = () => {
             color: #666;
             margin-bottom: 40px;
           }
+
+          #about{
+             scroll-margin-top: 100px;
+          }
+          #service{
+             scroll-margin-top: 100px;
+          }
           
           .navbar {
   position: fixed;
