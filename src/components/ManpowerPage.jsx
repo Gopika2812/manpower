@@ -202,10 +202,10 @@ const JobSeekingForm = ({ onClose }) => {
 
     emailjs
       .send(
-        "service_xzfqmmk",          // ⚡ replace with EmailJS service ID
-        "template_qpwwyrv",    // ⚡ your Job Seeker template ID
+        "service_xzfqmmk",        
+        "template_qpwwyrv",   
         formData,
-        "IzAYr8IUX9b6iHk4r"           // ⚡ your EmailJS public key
+        "IzAYr8IUX9b6iHk4r"
       )
       .then(
         () => {

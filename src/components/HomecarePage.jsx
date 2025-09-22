@@ -9,7 +9,7 @@ const HeroSection = () => {
       <div className="overlay"></div>
       <div className="hero-content">
         <h1 className="hero-title">WELCOME TO SUCCESS HOMECARE SOLUTIONS</h1>
-        <p className="hero-tagline">Your Trusted Partner in homecare Services</p>
+        <p className="hero-tagline">Your Trusted Partner in all type of cleaning services</p>
         <a href="#service"><button className="hero-button-homecare">Know More</button></a>
       </div>
     </section>
