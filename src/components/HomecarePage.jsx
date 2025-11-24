@@ -1,6 +1,7 @@
 import emailjs from "emailjs-com";
 import { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
+import WorkSection from "../components/WorkSection";
 
 // Hero Section Component
 const HeroSection = () => {
@@ -1333,6 +1334,7 @@ color: #2A5D7F;
       />
       <ServicesSection />
       {/* <ClientsSection /> */}
+      <WorkSection />
 
       <footer className="footer" id="footer">
         <div className="container">
