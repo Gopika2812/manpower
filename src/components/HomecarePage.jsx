@@ -1332,7 +1332,7 @@ color: #2A5D7F;
         onApplyNow={() => setShowForm('jobseeking')}
       />
       <ServicesSection />
-      <ClientsSection />
+      {/* <ClientsSection /> */}
 
       <footer className="footer" id="footer">
         <div className="container">
